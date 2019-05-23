@@ -27,6 +27,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <StackPanel>
             <TextBlock Text="Server Name :" Margin=" 10 10 10 5" HorizontalAlignment="Right" FontSize="20"/>
@@ -43,10 +44,10 @@
         <StackPanel Style="{StaticResource StkPnl}" Grid.Column="1" Grid.Row="2">
             <TextBox x:Name="User_Id" Width="150" Margin=" 10 10 10 5" HorizontalAlignment="Right" FontSize="16"/>
             <TextBox x:Name="Password_" Width="150" Margin=" 10 6 10 5" HorizontalAlignment="Right" FontSize="16"/>
-            <Button Content="SUBMIT" FontWeight="SemiBold" Margin="90 8 10 0" Height="25" Click="Button_Click"/>
         </StackPanel>
         <CheckBox x:Name="ChkBx" Content="Integrated Security" Grid.ColumnSpan="2" Grid.Row="1" 
                   Margin=" 10 10 10 5" HorizontalAlignment="Center" FontSize="16">
         </CheckBox>
+        <Button Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" Content="SUBMIT" FontWeight="SemiBold" Margin="90 8 10 0" Height="25" Click="Button_Click"/>
     </Grid>
 </Window>

@@ -15,7 +15,7 @@ namespace ADO_NET_1
             Window_Loaded();
         }
 
-        private void Window_Loaded()
+        public void Window_Loaded()
         {
             try
             {
@@ -30,7 +30,6 @@ namespace ADO_NET_1
                 MessageBox.Show($"{ex.Message}\nFill the gaps with valid settings", "Database Conncetion Error",
                     MessageBoxButton.OK, MessageBoxImage.Error); 
                 var SqlConnectionSettings = new ConnectionSettings(this);
-                Hide();
                 SqlConnectionSettings.Show();
             }
         }

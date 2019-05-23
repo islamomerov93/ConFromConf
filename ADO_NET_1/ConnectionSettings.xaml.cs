@@ -19,8 +19,8 @@ namespace ADO_NET_1
     /// </summary>
     public partial class ConnectionSettings : Window
     {
-        Window w;
-        public ConnectionSettings(Window w)
+        MainWindow w;
+        public ConnectionSettings(MainWindow w)
         {
             InitializeComponent();
             this.w = w;
@@ -31,13 +31,14 @@ namespace ADO_NET_1
             if (ChkBx.IsChecked == true)
             {
                 App.ConnectionString = $"Data Source = {Data_Source};" +
-                    $" Initial Catalog = {Initial_Catalog}; Integrated Security = true" ;
+                    $"Initial Catalog = {Initial_Catalog}; Integrated Security = True; Connect Timeout=5" ;
             }
             else
             {
                 App.ConnectionString = $"Data Source = {Data_Source};" +
-                    $" Initial Catalog = {Initial_Catalog}; UserId = {User_Id}; Password = {Password_}";
+                    $" Initial Catalog = {Initial_Catalog}; User Id = {User_Id}; Password = {Password_}; Connect Timeout=5";
             }
+            w.Window_Loaded();
             w.Show();
             Close();
         }
